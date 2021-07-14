@@ -1,5 +1,5 @@
 function computerPlay() {
-    let options = ["rock", "paper", "scissors"];
+    let options = ["Rock", "Paper", "Scissors"];
     let choice = options[randomNum()];
 
     //console.log(randomNum());
@@ -25,7 +25,7 @@ function RPS(playerSelection, computerSelection) {
     let draw = "Draw :EZ:"
 
     switch (computerSelection) {
-        case "rock":
+        case "Rock":
             if (playerSelection == "rock")
                 console.log(draw)
             else if (playerSelection == "paper")
@@ -34,7 +34,7 @@ function RPS(playerSelection, computerSelection) {
                 console.log(lose);
             break;
 
-        case "paper":
+        case "Paper":
             if (playerSelection == "paper")
                 console.log(draw)
             else if (playerSelection == "scissors")
@@ -43,7 +43,7 @@ function RPS(playerSelection, computerSelection) {
                 console.log(lose);
             break;
 
-        case "scissors":
+        case "Scissors":
             if (playerSelection == "scissors")
                 console.log(draw)
             else if (playerSelection == "rock")
