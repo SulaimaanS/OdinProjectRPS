@@ -91,4 +91,16 @@ function game() {
     else
         console.log("Draw!");
 }
-game();
+//game();
+
+
+//basic DOM practice
+const body = document.querySelector("body");
+const firstDiv = document.createElement('div');
+body.appendChild(firstDiv);
+
+firstDiv.style.color = 'blue';
+firstDiv.style.cssText = 'color: white, background: black';
+firstDiv.setAttribute('id', 'firstDiv');
+console.log(firstDiv.getAttribute('id'));
+firstDiv.textContent = "Wow I'm trying to learn how DOM works";
