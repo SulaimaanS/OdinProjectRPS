@@ -103,4 +103,4 @@ firstDiv.style.color = 'blue';
 firstDiv.style.cssText = 'color: white, background: black';
 firstDiv.setAttribute('id', 'firstDiv');
 console.log(firstDiv.getAttribute('id'));
-firstDiv.textContent = "Wow I'm trying to learn how DOM works";
+firstDiv.textContent = "WoW I'm trying to learn how DOM works";
