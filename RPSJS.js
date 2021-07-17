@@ -96,11 +96,50 @@ function game() {
 
 //basic DOM practice
 const body = document.querySelector("body");
-const firstDiv = document.createElement('div');
-body.appendChild(firstDiv);
 
-firstDiv.style.color = 'blue';
-firstDiv.style.cssText = 'color: white, background: black';
-firstDiv.setAttribute('id', 'firstDiv');
-console.log(firstDiv.getAttribute('id'));
-firstDiv.textContent = "WoW I'm trying to learn how DOM works";
+const cont = document.createElement('div'); //Parent Div
+cont.style.backgroundColor = "purple";
+cont.style.color = "blue"
+//cont.style.cssText = 'color: white, background: black';
+cont.setAttribute('id', 'cont');
+console.log(cont.backgroundColor);
+const h3Cont = document.createElement("h3");
+h3Cont.textContent = "WoW I'm trying to learn how DOM works";
+
+
+const one = document.createElement('div'); //First Child
+one.classList.add('classG');
+one.style.color = "red";
+one.style.backgroundColor = "black";
+const pOne = document.createElement("p");
+pOne.textContent = "Test Message to see if paragraphs are made like this in JS"
+
+
+const two = document.createElement('div'); //Second Child
+two.classList.toggle('toggler'); //cleaner to toggle than adding/removing inline
+two.style.cssText = 'background-color:pink;border:6px solid black;height:100px;width:100px;';
+const pTwo = document.createElement("p");
+pTwo.textContent = "O shit it works";
+
+
+let btnClick = () => alert('beep boop'); //Alert Func
+let clicking = (e) => console.log(e) //Event callback test
+
+const btn = document.createElement('button');
+btn.textContent = 'this is a button';
+btn.style.color = 'pink';
+btn.setAttribute('id', 'test');
+// btn.addEventListener('click', function (e) { //function is just a callback (can be any custom function?)
+//     e.target.style.color = 'red';
+// });
+btn.addEventListener('click', clicking  //function is just a callback (can be any custom function?)
+);
+
+
+one.appendChild(pOne);
+one.appendChild(btn);
+two.appendChild(pTwo);
+cont.appendChild(h3Cont);
+cont.appendChild(one);
+cont.appendChild(two);
+body.appendChild(cont);
